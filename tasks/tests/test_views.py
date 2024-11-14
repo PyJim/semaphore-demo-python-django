@@ -45,4 +45,5 @@ class TaskListViewTest(TestCase):
         """
         response = self.client.get(reverse('tasks:tasks_list'), follow=True)
         self.assertEqual(response.status_code, 200)
+        print(f"Template used: {response.templates[0].name}")
         self.assertTemplateUsed(response, 'tasks/task_list.html')
