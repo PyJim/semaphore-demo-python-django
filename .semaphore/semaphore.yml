@@ -75,6 +75,8 @@ blocks:
           - cache restore
           - pip install -r requirements.txt --cache-dir .pip_cache
           - mysql --host=$DB_HOST -u$DB_USER -e "create database $DB_NAME"
+          - python manage.py makemigrations
+          - python manage.py migrate
           - 'nohup python manage.py runserver 127.0.0.1:8732 &'
       jobs:
         - name: Browser Test
