@@ -10,6 +10,8 @@ class TaskModelTest(TestCase):
     """
     Test Model class
     """
+    databases = {'default'}
+    
     @classmethod
     def setUpTestData(cls):
         """

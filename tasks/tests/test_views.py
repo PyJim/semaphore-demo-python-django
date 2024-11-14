@@ -11,6 +11,8 @@ class TaskListViewTest(TestCase):
     """
     Test View class
     """
+    databases = {'default'}
+    
     @classmethod
     def setUpTestData(cls):
         """
