@@ -13,6 +13,7 @@ class TaskList(ListView):
     Task list Generic List View
     """
     model = Task
+    template_name = 'tasks/task_list.html'
     ordering = ['-task_created']
 
     def get_context_data(self, **kwargs):
