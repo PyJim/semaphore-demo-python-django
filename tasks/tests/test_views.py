@@ -29,7 +29,7 @@ class TaskListViewTest(TestCase):
         """
         :return: None
         """
-        response = self.client.get('/', follow=True)
+        response = self.client.get('task/', follow=True)
         self.assertEqual(response.status_code, 200)
 
     def test_view_url_by_name(self):
